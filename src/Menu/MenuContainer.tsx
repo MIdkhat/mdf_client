@@ -41,7 +41,7 @@ const MenuContainer: React.FC = () => {
 
     // Define the parameters to be passed to the PHP file
     const params = {
-      // Add any parameters here
+      id: 1,
     }
 
     // Use the fetchData function
