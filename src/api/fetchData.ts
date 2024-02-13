@@ -7,6 +7,7 @@ const PHP_API_URL = 'https://melbournedroneflyers.org/api/'
 const fetchData = async (endpoint: string, params: any): Promise<any> => {
   try {
     // Make a POST request to the PHP endpoint with the provided params
+    console.log('POST', `${PHP_API_URL}${endpoint}`, params)
     const response = await axios.post(`${PHP_API_URL}${endpoint}`, params)
 
     // Return the data received from the API
