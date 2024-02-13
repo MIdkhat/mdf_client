@@ -2,10 +2,7 @@
 require("connection.php");
 require("utils.php");
 
-if(isset($_POST['id'])) {
-    $id = $_POST['id'];
-    echo json_encode($id);
-}
+json_encode(utf8ize($_POST));
 // $sql = "SELECT * from councils";
 // $result = $connection->query($sql);
 // $response = array();

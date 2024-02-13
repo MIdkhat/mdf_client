@@ -43,7 +43,7 @@ const MenuContainer: React.FC = () => {
     const params = {
       id: 1,
     }
-
+    console.log(params)
     // Use the fetchData function
     fetchData(endpoint, params)
       .then((data) => {
