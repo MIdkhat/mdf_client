@@ -14,6 +14,7 @@ import spotButtonImage from '../assets/images/spot-button.png'
 // } from './Actions/togglers'
 import { useMapContext } from '../ContextProvider'
 import { MapState } from '../types'
+import fetchData from '../api/fetchData'
 
 const menuStyle: React.CSSProperties = {
   position: 'absolute',
@@ -34,6 +35,26 @@ const MenuContainer: React.FC = () => {
 
   const toggleCouncils = (active: boolean) => {
     console.log('councils, ', active ? 'show' : 'hide')
+
+    // Define the endpoint URL
+    const endpoint = 'councils.php'
+
+    // Define the parameters to be passed to the PHP file
+    const params = {
+      // Add any parameters here
+    }
+
+    // Use the fetchData function
+    fetchData(endpoint, params)
+      .then((data) => {
+        // Process the data
+        console.log(data)
+      })
+      .catch((error) => {
+        // Handle errors
+        console.error(error)
+      })
+
     const updatedCouncils = [{ name: 'test' }]
 
     const updatedMapState: MapState = {
